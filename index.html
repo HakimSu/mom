@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="site">
+<nav class="nav">
+  <button class="active" onclick="showPage('home')">Home</button>
+  <button onclick="showPage('notes')">Letters</button>
+  <button onclick="showPage('memories')">Memories</button>
+  <button onclick="showPage('story')">📸 Our Story</button>
+</nav>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="petals-bg" id="petals"></div>
+    <div class="hero-title">Happy Birthday,<br>Mamaaaaa</div>
+    <div class="hero-sub">Born 5th May, 1976 — a day the world became warmer</div>
+    <div class="age-badge">🌸 Turning 50 — Golden & Glorious 🌸</div>
+    <div class="countdown-wrap">
+      <div class="countdown-label">Birthday Countdown</div>
+      <div class="countdown-nums" id="countdown">
+        <div class="cd-block"><div class="cd-num" id="cd-d">0</div><div class="cd-unit">Days</div></div>
+        <div class="cd-sep">·</div>
+        <div class="cd-block"><div class="cd-num" id="cd-h">0</div><div class="cd-unit">Hours</div></div>
+        <div class="cd-sep">·</div>
+        <div class="cd-block"><div class="cd-num" id="cd-m">0</div><div class="cd-unit">Mins</div></div>
+        <div class="cd-sep">·</div>
+        <div class="cd-block"><div class="cd-num" id="cd-s">0</div><div class="cd-unit">Secs</div></div>
+      </div>
+    </div>
+    <div class="surprise-hint">✨ Explore all pages — especially 📸 Our Story ✨</div>
+  </div>
+</div>
+
+<!-- NOTES -->
+<div id="page-notes" class="page">
+  <div class="notes-page">
+    <div class="section-title">Letters of Love</div>
+    <div class="section-divider">✦ ✦ ✦</div>
+
+    <div class="note-card"><div class="note-number">01</div><div class="note-text">🌸 Mama, you are the reason our home feels like home. Every warm meal, every quiet sacrifice, every time you stayed up late so we could sleep in peace — I see it all, and I love you endlessly for it.</div></div>
+    <div class="note-card"><div class="note-number">02</div><div class="note-text">💛 You carry so much with a smile, Mama. Watching you be strong — not because you had to, but because you chose to — has taught me more than any book ever could.</div></div>
+    <div class="note-card"><div class="note-number">03</div><div class="note-text">🌼 Your laughter is my favourite sound in the whole world, Mama. When you laugh — really laugh — the room fills with something I can only call joy.</div></div>
+    <div class="note-card"><div class="note-number">04</div><div class="note-text">🌺 50 years of you on this earth is a gift to everyone who gets to know you, Mama. You make people feel seen, heard, and loved — that is a rare and beautiful superpower.</div></div>
+    <div class="note-card"><div class="note-number">05</div><div class="note-text">💖 You never asked for thank-yous. You just loved us, quietly and completely. So here is mine, long overdue: <em>Thank you, Mama. For everything. For every single thing.</em></div></div>
+
+    <div class="letter-wrap">
+      <div class="letter-text">Dear Mama,<br><br>On this milestone birthday — your 50th — I want you to know that you are not just loved, you are deeply, completely treasured. You are the thread that holds this family together. You are the warmth in every memory we have.<br><br>May this year bring you rest, joy, flowers, and all the things you've given others — returned to you tenfold. You deserve every beautiful thing.</div>
+      <div class="letter-sign">— With all my love 💗</div>
+    </div>
+
+    <div class="secret-zone" onclick="revealSecret(this)">
+      <h3>🔒 A Hidden Message for You</h3>
+      <p style="color:var(--text-light);font-size:13px;">Tap to unlock something just for Mama...</p>
+      <div class="secret-message">
+        <div style="margin-top:18px;font-family:'Playfair Display',serif;font-size:19px;color:var(--rose-deep);line-height:1.8;font-style:italic;">"If I could go back and choose my mother all over again — I would choose you. A thousand times, in a thousand lifetimes. Always you."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMORIES -->
+<div id="page-memories" class="page">
+  <div class="memories-page">
+    <div class="section-title">Memories & Moments</div>
+    <div class="section-divider">✦ ✦ ✦</div>
+    <div class="memory-grid">
+      <div class="memory-card" onclick="openMemory(0)"><div class="memory-photo" style="background:linear-gradient(135deg,#fdf0f3,#f5c4a1);">🌅</div><div class="memory-caption">The mornings you made everything feel okay</div><div class="memory-year" style="padding:0 14px 12px;">Every day</div></div>
+      <div class="memory-card" onclick="openMemory(1)"><div class="memory-photo" style="background:linear-gradient(135deg,#fdf6f0,#9bbd9b55);">🍱</div><div class="memory-caption">Your cooking — the taste of home, wrapped in love</div><div class="memory-year" style="padding:0 14px 12px;">Always remembered</div></div>
+      <div class="memory-card" onclick="openMemory(2)"><div class="memory-photo" style="background:linear-gradient(135deg,#fdf0f3,#c0697e22);">🎊</div><div class="memory-caption">Every celebration made magical because you were there</div><div class="memory-year" style="padding:0 14px 12px;">Countless moments</div></div>
+      <div class="memory-card" onclick="openMemory(3)"><div class="memory-photo" style="background:linear-gradient(135deg,#faeeda,#f5c4a1);">🌙</div><div class="memory-caption">Late nights when you stayed up to make sure we were safe</div><div class="memory-year" style="padding:0 14px 12px;">All those nights</div></div>
+      <div class="memory-card" onclick="openMemory(4)"><div class="memory-photo" style="background:linear-gradient(135deg,#e1f5ee,#9bbd9b44);">🌸</div><div class="memory-caption">Your garden of kindness — seeds planted in everyone</div><div class="memory-year" style="padding:0 14px 12px;">A lifetime of giving</div></div>
+      <div class="memory-card" onclick="openMemory(5)"><div class="memory-photo" style="background:linear-gradient(135deg,#fdf0f3,#d4537e22);">😂</div><div class="memory-caption">Your contagious laugh — our favourite sound in the world</div><div class="memory-year" style="padding:0 14px 12px;">Our favourite sound</div></div>
+    </div>
+    <button class="wish-btn" onclick="launchConfetti()">🎉 Send Birthday Wishes 🎉</button>
+    <div class="secret-zone" style="margin-top:36px;" onclick="revealSecret(this)">
+      <h3>🌟 A Surprise Just for You</h3>
+      <p style="color:var(--text-light);font-size:13px;">Tap to find something special hiding here...</p>
+      <div class="secret-message">
+        <div style="margin-top:20px;">
+          <div style="font-size:36px;margin-bottom:10px;">🎂</div>
+          <div style="font-family:'Playfair Display',serif;font-size:20px;color:var(--rose-deep);margin-bottom:8px;">50 Reasons We Love You</div>
+          <div style="font-size:13px;color:var(--text-mid);line-height:1.9;">Your smile. Your strength. Your cooking. Your patience. Your courage. Your warmth. Your voice. Your laugh. Your hugs. Your advice. Your sacrifices. Your stories. Your prayers. Your hope. Your resilience. Your kindness to strangers. Your loyalty to family. Your quiet wisdom. Your fierce love. The way you forgive. The way you celebrate us. The way you worry. The way you hold on. The way you let go. Your morning tea ritual. Your late-night conversations. The way you make us feel safe. The way you make home feel like home. Your faith. Your joy. Your tears that show you care. Your hard work. Your grace. Your elegance. Your pride in who you are. The way you've shaped us. Your 50 years of being YOU — perfectly, beautifully, irreplaceably you. 💗</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHOTO STORY -->
+<div id="page-story" class="page">
+  <div class="story-page">
+    <div class="story-intro">
+      <div class="section-title">📸 Our Story</div>
+      <div class="section-divider">✦ ✦ ✦</div>
+      <p>Five real moments. Five pieces of my heart.<br>Look carefully at each photo — secrets are hiding inside. ✨💗🌸</p>
+    </div>
+    <div style="height:24px;"></div>
+
+    <!-- SLIDE 1 -->
+    <div class="story-slide active" id="slide-0">
+      <div class="slide-inner">
+        <div class="slide-photo-wrap">
+          <img src="/cat.jpg" alt="Mama with kitten">
+          <button class="hidden-btn sparkle" style="top:12%;left:8%;" onclick="openSecret(0)">✨</button>
+          <button class="hidden-btn heart" style="bottom:18%;right:10%;" onclick="openSecret(0)">💗</button>
+          <button class="hidden-btn flower" style="top:40%;left:3%;" onclick="openSecret(0)">🌸</button>
+        </div>
+        <div class="hint-text">💡 Something is hiding in the photo — can you find it?</div>
+        <div class="slide-content">
+          <div class="slide-num">Memory 01 · November 2023</div>
+          <div class="slide-title">The Softest Heart in the Room</div>
+          <div class="slide-caption">Look at you, Mama — cradling that tiny kitten like it was your own child. This is exactly who you are. You never walk past something small and helpless without stopping to give it warmth. The way you looked at that little creature is the same way you have always looked at us — with pure, unquestioning love.</div>
+        </div>
+        <div class="secret-panel" id="secret-0">
+          <div class="secret-panel-title">🌸 A Secret for Mama</div>
+          <div class="secret-panel-text">"You found it! Just like you always find a way to make everyone feel cared for — even a tiny kitten that wandered in. Mama, your heart has no limit. That is your greatest gift to this world. We love you so much it hurts sometimes. 💗"</div>
+        </div>
+        <div class="slide-nav">
+          <button class="arrow-btn" disabled>← Prev</button>
+          <div class="slide-dots" id="dots-main"></div>
+          <button class="arrow-btn" onclick="changeSlide(1)">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="story-slide" id="slide-1">
+      <div class="slide-inner">
+        <div class="slide-photo-wrap">
+          <img src="/holi.jpg" alt="Holi with family">
+          <button class="hidden-btn sparkle" style="top:8%;right:12%;" onclick="openSecret(1)">✨</button>
+          <button class="hidden-btn heart" style="top:55%;left:5%;" onclick="openSecret(1)">💗</button>
+          <button class="hidden-btn flower" style="bottom:10%;right:5%;" onclick="openSecret(1)">🌸</button>
+        </div>
+        <div class="hint-text">💡 Something colourful is hiding here too...</div>
+        <div class="slide-content">
+          <div class="slide-num">Memory 02 · Holi 2025</div>
+          <div class="slide-title">Painted in Colour, Held Together by Love</div>
+          <div class="slide-caption">Faces full of colour, hearts full of laughter — this is us on Holi. Mama, you are right there in the middle of it all, exactly where you belong. Every celebration, every colour, every burst of joy in this photo — you are the reason it exists. You are what holds all of us together.</div>
+        </div>
+        <div class="secret-panel" id="secret-1">
+          <div class="secret-panel-title">✨ A Colourful Secret</div>
+          <div class="secret-panel-text">"You found the sparkle! Just like you bring colour into every single day for us, Mama. On Holi, on ordinary Tuesdays, on hard days when we needed it most — you always showed up with colour and warmth. This photo is proof that the best thing in our life is you. 🎨💗"</div>
+        </div>
+        <div class="slide-nav">
+          <button class="arrow-btn" onclick="changeSlide(-1)">← Prev</button>
+          <div class="slide-dots"></div>
+          <button class="arrow-btn" onclick="changeSlide(1)">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="story-slide" id="slide-2">
+      <div class="slide-inner">
+        <div class="slide-photo-wrap">
+          <img src="/pizza.jpg" alt="Pizza together">
+          <button class="hidden-btn sparkle" style="top:10%;right:8%;" onclick="openSecret(2)">✨</button>
+          <button class="hidden-btn heart" style="bottom:15%;left:8%;" onclick="openSecret(2)">💗</button>
+          <button class="hidden-btn flower" style="top:38%;right:4%;" onclick="openSecret(2)">🌸</button>
+        </div>
+        <div class="hint-text">💡 Three hidden surprises are scattered around...</div>
+        <div class="slide-content">
+          <div class="slide-num">Memory 03 · April 2025</div>
+          <div class="slide-title">Pizza on the Bed & All is Well</div>
+          <div class="slide-caption">Pizza boxes, no table, sitting on the bed — and honestly? This is one of the happiest photos we have. Because it's not about where we eat, Mama. It's about who we eat with. Your smile in this photo is everything. You make every simple moment feel like a celebration.</div>
+        </div>
+        <div class="secret-panel" id="secret-2">
+          <div class="secret-panel-title">🍕 A Cheesy Secret, Just for You</div>
+          <div class="secret-panel-text">"Did you know this is one of our favourite photos? Not because of the pizza — because of your smile, Mama. That big, happy, unbothered smile. We never need a fancy table or a special occasion. We just need you. Thank you for making the ordinary feel like magic. 💗"</div>
+        </div>
+        <div class="slide-nav">
+          <button class="arrow-btn" onclick="changeSlide(-1)">← Prev</button>
+          <div class="slide-dots"></div>
+          <button class="arrow-btn" onclick="changeSlide(1)">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="story-slide" id="slide-3">
+      <div class="slide-inner">
+        <div class="slide-photo-wrap">
+          <img src="/toge.jpg" alt="Mama and son">
+          <button class="hidden-btn sparkle" style="top:6%;left:6%;" onclick="openSecret(3)">✨</button>
+          <button class="hidden-btn heart" style="bottom:20%;right:8%;" onclick="openSecret(3)">💗</button>
+          <button class="hidden-btn flower" style="top:50%;left:4%;" onclick="openSecret(3)">🌸</button>
+        </div>
+        <div class="hint-text">💡 Look closely — love is hiding in the corners...</div>
+        <div class="slide-content">
+          <div class="slide-num">Memory 04 · October 2025</div>
+          <div class="slide-title">My Favourite Photo of Us</div>
+          <div class="slide-caption">Just the two of us, standing in front of our beloved Radha-Krishna painting — and this is one of the most beautiful photos I have ever taken. Mama, you look radiant. You are glowing. And I am so proud to stand beside you. This is my favourite memory: just us, together, at home, where everything feels right.</div>
+        </div>
+        <div class="secret-panel" id="secret-3">
+          <div class="secret-panel-title">💗 The Biggest Secret of All</div>
+          <div class="secret-panel-text">"Mama, I kept this one for last because it means the most to me. This photo — just you and me — is everything. You are my anchor, my home, my first love. I don't say it enough. But I feel it every single day. Happy Birthday. I love you more than words will ever be able to hold. — Your child 💗"</div>
+        </div>
+        <div class="slide-nav">
+          <button class="arrow-btn" onclick="changeSlide(-1)">← Prev</button>
+          <div class="slide-dots"></div>
+          <button class="arrow-btn" onclick="changeSlide(1)">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="story-slide" id="slide-4">
+      <div class="slide-inner">
+        <div class="slide-photo-wrap">
+          <img src="/balloon.jpg" alt="Celebration with balloons">
+          <button class="hidden-btn sparkle" style="top:5%;left:40%;" onclick="openSecret(4)">✨</button>
+          <button class="hidden-btn heart" style="bottom:12%;left:6%;" onclick="openSecret(4)">💗</button>
+          <button class="hidden-btn flower" style="top:15%;right:6%;" onclick="openSecret(4)">🌸</button>
+        </div>
+        <div class="hint-text">💡 The last photo has the biggest secret of all... 🎈</div>
+        <div class="slide-content">
+          <div class="slide-num">Memory 05 · October 2023</div>
+          <div class="slide-title">Balloons, Smiles & the Women I Love Most</div>
+          <div class="slide-caption">Balloons everywhere, the prettiest smiles, and Mama dressed in her gorgeous pink suit looking like an absolute queen 🌸. This photo bursts with joy. You look so beautiful here, Mama — elegant, happy, glowing. Every person in this photo is lucky to know you. And we are the luckiest of all.</div>
+        </div>
+        <div class="secret-panel" id="secret-4">
+          <div class="secret-panel-title">🎈 The Final Secret — The Most Important One</div>
+          <div class="secret-panel-text">"Mama — you made it to the last photo. Every single photo in this gallery is a piece of you. Your kindness, your laughter, your love, your presence — it fills every frame. On your 50th birthday, I want to tell you that you are the most beautiful, most loved, most irreplaceable person in our world. This isn't just a website. This is my heart, made into pages, just for you. Happy Birthday, Mama. 🌸💗✨"</div>
+        </div>
+        <div class="slide-nav">
+          <button class="arrow-btn" onclick="changeSlide(-1)">← Prev</button>
+          <div class="slide-dots"></div>
+          <button class="arrow-btn" disabled>Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <button class="wish-btn" onclick="launchConfetti()">🎉 Happy Birthday Mama! 🎉</button>
+    </div>
+  </div>
+</div>
+
+<!-- Memory popup -->
+<div id="popup" class="popup-overlay" onclick="closePopup(event)">
+  <div class="popup-box">
+    <button class="popup-close" onclick="document.getElementById('popup').classList.remove('open')">✕</button>
+    <div class="popup-emoji" id="popup-emoji">🌸</div>
+    <div class="popup-title" id="popup-title">Memory</div>
+    <div class="popup-text" id="popup-text">...</div>
+  </div>
+</div>
+
+<div class="gem-hint" onclick="showPage('story')">📸 Find the hidden secrets...</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
